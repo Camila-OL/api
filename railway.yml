@@ -1,0 +1,10 @@
+services:
+  web:
+    image: railwayapp/node:14 # Versão do Node.js que você está usando
+    env:
+      PORT: 3000 # Porta em que sua aplicação Node.js está configurada para rodar
+    # Comandos para build e start da sua aplicação
+    build:
+      - npm install # Instalação das dependências
+    run:
+      - npm start # Comando para iniciar a aplicação
