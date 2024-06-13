@@ -8,7 +8,7 @@ let pizzas = require('./src/data/pizzas.json');
 server.use(cors());
 server.use(express.json()); // Middleware para parsear JSON no corpo da requisição
 
-server.get('/pizzas', (req, res) => {
+server.get('/', (req, res) => {
     return res.json(pizzas);
 });
 
@@ -19,7 +19,7 @@ const generateId = () => {
 };
 
 // Endpoint POST para adicionar uma nova pizza
-server.post('/pizzas', (req, res) => {
+server.post('/', (req, res) => {
     const newPizza = req.body;
 
     // Validação dos dados
