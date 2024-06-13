@@ -8,7 +8,7 @@ let pizzas = require('./src/data/pizzas.json');
 server.use(cors());
 server.use(express.json()); // Middleware para parsear JSON no corpo da requisição
 
-server.get('/', (req, res) => {
+server.get('/', (req, res) => { 
     return res.json(pizzas);
 });
 
